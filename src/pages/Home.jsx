@@ -93,7 +93,7 @@ const Home = ({helmetTitle}) => {
                 </TextTransition>
 
 
-                <Typography variant='h4' color='whitesmoke'> من یک {' '}  </Typography>
+                <Typography variant='h4' color='whitesmoke'> {' '}  من یک  </Typography>
             </Box>
 
 

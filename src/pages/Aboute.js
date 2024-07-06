@@ -1,7 +1,7 @@
 import { CodeRounded, SelfImprovementRounded } from "@mui/icons-material";
 import { Avatar, Card, CardContent, Chip, Divider, Typography } from "@mui/material";
 import Grid from '@mui/material/Unstable_Grid2';
-import image from '../assets/20210604_224230_1.jpg';
+import image from '../assets/profile.jpg';
 import {Skill ,DevInfo} from "../components/pages";
 import { devSkills } from "../constants/skills";
 import { useEffect, useState } from "react";
