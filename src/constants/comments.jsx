@@ -1,7 +1,7 @@
-import userAvatar from '../assets/20210604_224230_1.jpg';
+import userAvatar from '../assets/user.png';
 export const comments = [
     {
-        fullname: "یونس قربانی",
+        fullname: "ملیکا اصلاحی",
         jobTitle: "مدرس و برنامه نویس فول استک",
         avatar: userAvatar,
         comment: `
@@ -9,7 +9,7 @@ export const comments = [
               `,
     },
     {
-        fullname: "یونس قربانی",
+        fullname:  "ملیکا اصلاحی",
         jobTitle: "مدرس و برنامه نویس فول استک",
         avatar: userAvatar,
         comment: `
@@ -17,7 +17,7 @@ export const comments = [
               `,
     },
     {
-        fullname: "یونس قربانی",
+        fullname: "ملیکا اصلاحی",
         jobTitle: "مدرس و برنامه نویس فول استک",
         avatar: userAvatar,
         comment: `
@@ -25,7 +25,7 @@ export const comments = [
               `,
     },
     {
-        fullname: "یونس قربانی",
+        fullname:"ملیکا اصلاحی",
         jobTitle: "مدرس و برنامه نویس فول استک",
         avatar: userAvatar,
         comment: `
@@ -33,7 +33,7 @@ export const comments = [
               `,
     },
     {
-        fullname: "یونس قربانی",
+        fullname: "ملیکا اصلاحی",
         jobTitle: "مدرس و برنامه نویس فول استک",
         avatar: userAvatar,
         comment: `
@@ -41,7 +41,7 @@ export const comments = [
               `,
     },
     {
-        fullname: "یونس قربانی",
+        fullname: "ملیکا اصلاحی",
         jobTitle: "مدرس و برنامه نویس فول استک",
         avatar: userAvatar,
         comment: `

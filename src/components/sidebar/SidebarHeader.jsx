@@ -1,7 +1,7 @@
 import { Avatar, Typography } from '@mui/material';
 import { useState } from 'react';
 import { RandomReveal } from 'react-random-reveal';
-import image from '../../assets/20210604_224230_1.jpg';
+import image from '../../assets/profile.jpg';
 import alphabetPersion from '../../constants/alphabetPersion';
 import ActionThemeButton from '../ActionThemeButton';
 import  SocialMediaIcons from '../SocialMediaIcons';
@@ -24,7 +24,7 @@ const SidebarHeader = () => {
                 <RandomReveal isPlaying duration={4} characterSet={alphabetPersion} characters="ملیکا اصلاحی " onComplete={() => { setStart(true) }} />
             </Typography>
             {start && (<Typography variant='caption' color={'gray'}>
-                <RandomReveal isPlaying duration={4} characterSet={alphabetPersion} characters="برنامه نویس وتوسعه دهنده ی فول استک  " />
+                <RandomReveal isPlaying duration={4} characterSet={alphabetPersion} characters="برنامه نویس" />
             </Typography>)}
       <SocialMediaIcons />
         </>
