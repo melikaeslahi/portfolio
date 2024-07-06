@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import '../App.css';
-import SwipeableViews from 'react-swipeable-views';
+// import SwipeableViews from 'react-swipeable-views';
 import MainLayout from '../layouts/MainLayout';
 import {SideBar} from '../components/sidebar/';
 import {Page }from '../components/pages' ;
@@ -52,10 +52,10 @@ useEffect(()=>{
       </SidebarContainer>
       <DrawerActionButton  />
       <PagesContainer>
-        <SwipeableViews 
+        {/* <SwipeableViews 
                      index={pageNumber}
                      onChange={handlePageNumber}
-        >
+        > */}
         <Page pageNumber={pageNumber} index={0} >
           <Home  helmetTitle="ملیکا اصلاحی | صفحه ی اصلی"/>
            
@@ -79,7 +79,7 @@ useEffect(()=>{
         <Page pageNumber={pageNumber} index={5} >
           <Contact   helmetTitle=" ملیکا اصلاحی| ارتباط با من "/>
         </Page>
-        </SwipeableViews>
+        {/* </SwipeableViews> */}
       
       </PagesContainer>
 
