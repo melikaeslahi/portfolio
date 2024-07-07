@@ -24,7 +24,7 @@ const Home = ({helmetTitle}) => {
         await loadFull(engine);
     }, []);
     const particlesLoaded = useCallback(async (container) => {
-        await console.log(container)
+        // await console.log(container)
     });
 
     useEffect(() => {
@@ -74,7 +74,11 @@ const Home = ({helmetTitle}) => {
 
         }}>
             <Box component='div' sx={{ display: 'flex' }} >
-                <Particles id="tsparticles" options={link} init={particelsInit} loaded={particlesLoaded} />
+                <Particles id="tsparticles" 
+                options={link} 
+                init={particelsInit} 
+                // loaded={particlesLoaded}
+                 />
                 <Typography variant='h3' color='#F93c92' > {'{{'} </Typography>
                 <Typography variant='h3' color='red' ref={nameEl}>   </Typography>
                 <Typography variant='h3' color='#F93c92' > {'}}'} </Typography>

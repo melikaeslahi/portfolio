@@ -10,12 +10,18 @@ import { DrawerActionButton } from '../components/drawer';
 import {Home , Aboute ,Courses ,Resume ,Comments ,Contact} from '../pages/index';
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import SwipeableViews from 'react-swipeable-views';
+ 
+ 
+ 
 
  
  
  
 
 function App() {
+  const [  pageNumber , setPageNumber]=useState(1);
+  console.log(pageNumber);
 
 const [ drawerOpen , setDrawerOpen]=useState(false);
 const [mode , setMode] = useState();
@@ -31,14 +37,18 @@ useEffect(()=>{
     setDrawerOpen(false);
   }
 }, [isMdUp]);
-
+const handlePageNumber = (event, newValue) => {
+  console.log(newValue);
+  setPageNumber(newValue);
+}
   
   const handleThemeChange =()=>{
     setMode(prevmode=> prevmode === 'light' ? 'dark' : 'light');
   }
   return (
     <MainContext.Provider value={
-    { 
+    { pageNumber,
+      setPageNumber,
      handleThemeChange,
      drawerOpen,
      setDrawerOpen}
@@ -49,32 +59,34 @@ useEffect(()=>{
       </SidebarContainer>
       <DrawerActionButton  />
       <PagesContainer>
-      
-        <Page   index={0} >
+      <SwipeableViews 
+                     index={pageNumber}
+                      onChangeIndex={handlePageNumber}
+        >
+        <Page pageNumber={pageNumber}  index={0} >
           <Home  helmetTitle="ملیکا اصلاحی | صفحه ی اصلی"/>
            
         </Page>
 
-        <Page  index={1} >  
+        <Page pageNumber={pageNumber} index={1} >  
           <Aboute    helmetTitle="ملیکا اصلاحی| درباره ی من"/>
         </Page>
 
-        <Page   index={2} >
+        <Page pageNumber={pageNumber}  index={2} >
           <Resume  helmetTitle="ملیکا اصلاحی|رزومه من" />
         </Page>
 
-        <Page   index={3} >
+        <Page pageNumber={pageNumber}  index={3} >
           <Courses helmetTitle="ملیکا اصلاحی| دوره ها ی من  "/>
         </Page>
 
-        <Page   index={4} >
+        <Page  pageNumber={pageNumber} index={4} >
            <Comments  helmetTitle=" ملیکا اصلاحی|نظرات دانشجویان " />
         </Page>
-        <Page   index={5} >
+        <Page   pageNumber={pageNumber} index={5} >
           <Contact   helmetTitle=" ملیکا اصلاحی| ارتباط با من "/>
         </Page>
-        
-      
+           </SwipeableViews>
       </PagesContainer>
 
     </MainLayout>
